@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import styles from './style.module.scss'
 import { MotionValue, motion } from 'framer-motion'
 import Image from 'next/image'
 

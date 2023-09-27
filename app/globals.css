@@ -25,3 +25,15 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.scroll-gallery-wrapper:nth-of-type(1) {
+  top: -45%;
+}
+.scroll-gallery-wrapper:nth-of-type(2) {
+  top: -95%;
+}
+.scroll-gallery-wrapper:nth-of-type(3) {
+  top: -45%;
+}
+.scroll-gallery-wrapper:nth-of-type(4) {
+  top: -75%;
+}
