@@ -1,5 +1,4 @@
-import ParallaxGallery from '@/components/(smoth-parallax-scroll-gallery/ParallaxGallery'
-import React from 'react'
+import ParallaxGallery from '@/components/(smoth-parallax-scroll-gallery)/ParallaxGallery'
 
 type Props = {}
 
