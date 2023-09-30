@@ -4,7 +4,11 @@ import ImageSlider from './components/ImageSlider'
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
-  return <ImageSlider />
+  return (
+    <section className="overflow-hidden">
+      <ImageSlider />
+    </section>
+  )
 }
 
 export default page

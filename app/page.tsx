@@ -3,6 +3,7 @@ import vignette from '../public/projects/vignette.png'
 import galleryScroll from '../public/projects/parallax-scroll-gallery.png'
 import hideNav from '../public/projects/scrollable-navbar.png'
 import brain from '../public/projects/brain.png'
+import carousel from '../public/projects/carousel.png'
 import Link from 'next/link'
 
 export default function Home() {
@@ -48,6 +49,16 @@ export default function Home() {
             <div className="absolute flex items-end justify-center inset-0 w-full h-full bg-gradient-to-t from-white/80 to-white/20 py-6">
               <h2 className="text-center text-4xl font-bold text-black ">
                 Brain Animation
+              </h2>
+            </div>
+          </Link>
+        </article>
+        <article className="relative w-full overflow-hidden flex flex-col rounded-xl shadow-2xl h-64 border-white/40 ">
+          <Link href={'/carousel'} target="_blank">
+            <Image src={carousel} alt="" fill className="object-cover" />
+            <div className="absolute flex items-end justify-center inset-0 w-full h-full bg-gradient-to-t from-white/80 to-white/20 py-6">
+              <h2 className="text-center text-4xl font-bold text-black ">
+                Carousel
               </h2>
             </div>
           </Link>
