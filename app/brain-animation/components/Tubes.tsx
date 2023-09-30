@@ -4,6 +4,7 @@ import { data } from './data'
 import * as THREE from 'three'
 import BrainParticles from './BrainParticles'
 
+// converting model 3d to json: https://github.com/mrdoob/three.js/blob/ae28664847dde4dde5c826d0381314b4464aec29/utils/converters/README.md
 const PATHS = data.economics[0].paths
 
 const randomRange = (min: number, max: number) =>
