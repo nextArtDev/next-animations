@@ -4,8 +4,6 @@ import { motion } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
 import { StaticImageData } from 'next/image'
 
-// const images = [image1, image2, image3, image4, image5]
-
 interface OpenCardProps {
   cards: {
     image: StaticImageData
