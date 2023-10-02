@@ -5,6 +5,8 @@ import hideNav from '../public/projects/scrollable-navbar.png'
 import brain from '../public/projects/brain.png'
 import carousel from '../public/projects/carousel.png'
 import expandedCard from '../public/projects/expanded-card.png'
+import Earth from '../public/projects/3d-earth.png'
+import FlipCard from '../public/projects/flipCard.png'
 import Link from 'next/link'
 
 const projects = [
@@ -28,6 +30,18 @@ const projects = [
     name: 'Expandable Card',
     image: expandedCard,
     url: '/expandable-card',
+  },
+  {
+    id: 6,
+    name: '3D Earth',
+    image: Earth,
+    url: '/3d-earth',
+  },
+  {
+    id: 7,
+    name: 'Card Flip',
+    image: FlipCard,
+    url: '/card-flip',
   },
 ]
 export default function Home() {
