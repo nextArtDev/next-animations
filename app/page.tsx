@@ -7,6 +7,7 @@ import carousel from '../public/projects/carousel.png'
 import expandedCard from '../public/projects/expanded-card.png'
 import Earth from '../public/projects/3d-earth.png'
 import FlipCard from '../public/projects/flipCard.png'
+import Pixalate from '../public/projects/pixalate.png'
 import Link from 'next/link'
 
 const projects = [
@@ -43,10 +44,16 @@ const projects = [
     image: FlipCard,
     url: '/card-flip',
   },
+  {
+    id: 8,
+    name: 'Pixelate Menu',
+    image: Pixalate,
+    url: '/pixel-transition',
+  },
 ]
 export default function Home() {
   return (
-    <main className="w-screen h-screen max-w-7xl mx-auto overflow-x-hidden pb-20">
+    <main className="w-screen h-screen mx-auto overflow-x-hidden pb-20">
       <h2 className="text-5xl font-bold text-center py-16 pb-24 underline underline-offset-[12px]">
         Projects
       </h2>
