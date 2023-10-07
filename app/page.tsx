@@ -8,6 +8,7 @@ import expandedCard from '../public/projects/expanded-card.png'
 import Earth from '../public/projects/3d-earth.png'
 import FlipCard from '../public/projects/flipCard.png'
 import Pixalate from '../public/projects/pixalate.png'
+import Login from '../public/projects/login-form.png'
 import Link from 'next/link'
 
 const projects = [
@@ -49,6 +50,12 @@ const projects = [
     name: 'Pixelate Menu',
     image: Pixalate,
     url: '/pixel-transition',
+  },
+  {
+    id: 9,
+    name: 'Login Form',
+    image: Login,
+    url: '/login-form',
   },
 ]
 export default function Home() {

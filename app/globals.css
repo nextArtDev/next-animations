@@ -111,3 +111,36 @@ body {
   transform: rotate(-45deg);
   top: 0px;
 }
+
+/* sign in form  */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: 1px;
+  /* background-color: #1f293a; */
+  background-color: black;
+  padding: 0 6px;
+  color: #0ef;
+}
+
+.container span {
+  position: absolute;
+  width: 38px;
+  height: 10px;
+  background: #2c4766;
+  left: -40px;
+  top: 50%;
+  border-radius: 8px;
+  transform-origin: 240px;
+  transform: rotate(calc(var(--i) * (360deg / 50)));
+  animation: animateBlink 3s infinite linear;
+  animation-delay: calc(var(--i) * (3s / 50));
+}
+
+@keyframes animateBlink {
+  0% {
+    background: #0ef;
+  }
+  25% {
+    background: #2c4766;
+  }
+}
