@@ -20,6 +20,9 @@ dependencies:
   '@types/three':
     specifier: ^0.156.0
     version: 0.156.0
+  font-awesome:
+    specifier: ^4.7.0
+    version: 4.7.0
   framer-motion:
     specifier: ^10.16.4
     version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
@@ -29,6 +32,9 @@ dependencies:
   gsap:
     specifier: ^3.12.2
     version: 3.12.2
+  heroicons:
+    specifier: ^2.0.18
+    version: 2.0.18
   next:
     specifier: latest
     version: 13.5.3(react-dom@18.2.0)(react@18.2.0)
@@ -38,6 +44,9 @@ dependencies:
   react-dom:
     specifier: latest
     version: 18.2.0(react@18.2.0)
+  react-pageflip:
+    specifier: ^2.0.3
+    version: 2.0.3
   react-responsive:
     specifier: ^9.0.2
     version: 9.0.2(react@18.2.0)
@@ -1507,6 +1516,11 @@ packages:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
     dev: true
 
+  /font-awesome@4.7.0:
+    resolution: {integrity: sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==}
+    engines: {node: '>=0.10.3'}
+    dev: false
+
   /for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
@@ -1740,6 +1754,10 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /heroicons@2.0.18:
+    resolution: {integrity: sha512-3iaqznaz5GJ8Mox/eDfKHo7tYKuPiZV4vbg6pB6wjJhBa7ZKQlXT1KuUnsjkEiPy/ezyiqppOX6wUqYguMIq8w==}
+    dev: false
 
   /hyphenate-style-name@1.0.4:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
@@ -2344,6 +2362,10 @@ packages:
       p-limit: 3.1.0
     dev: true
 
+  /page-flip@2.0.7:
+    resolution: {integrity: sha512-96lQFUUz7r/LZzEUZJ3yBIMEKU9+m8HMFDzTvTdD6P7Ag/wXINjp9n0W7b4wanwnDbQETo4uNUoL3zMqpFxwGA==}
+    dev: false
+
   /parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -2533,6 +2555,12 @@ packages:
 
   /react-merge-refs@2.1.1:
     resolution: {integrity: sha512-jLQXJ/URln51zskhgppGJ2ub7b2WFKGq3cl3NYKtlHoTG+dN2q7EzWrn3hN3EgPsTMvpR9tpq5ijdp7YwFZkag==}
+    dev: false
+
+  /react-pageflip@2.0.3:
+    resolution: {integrity: sha512-k81mHhRvUM52y8jyzTCh5t4O0lepkLhp+XGSUzq2C3uD+iW99Cv0jfRlqFCjZbD5N3jKkIFr7/3giucoXKDP3Q==}
+    dependencies:
+      page-flip: 2.0.7
     dev: false
 
   /react-reconciler@0.27.0(react@18.2.0):

@@ -149,9 +149,9 @@ body {
 /* .texture-bg {
   background-image: url('/newspaper/texture/texture.jpg');
 } */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 .last span {
   writing-mode: vertical-rl;
 }
@@ -322,4 +322,84 @@ body {
 
 .box:nth-child(5) {
   z-index: -5;
+}
+
+/* //////////// */
+/* Flip book  */
+
+.book {
+  perspective: 1500;
+}
+.cover,
+.back-cover {
+  box-shadow: 0 0 5px rgb(41, 41, 41);
+  transform-origin: center left;
+}
+.cover {
+  transition: transform 1s;
+}
+.page {
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition-duration: 1.5s;
+}
+.front-page {
+  backface-visibility: hidden;
+}
+.front-page {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+#checkbox-cover:checked ~ .book {
+  transform: translateX(200px);
+}
+#checkbox-cover:checked ~ .book .cover {
+  transition: transform 1.5s, z-index 0.5s 0.5s;
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+#checkbox-cover:checked ~ .book .page {
+  box-shadow: 0 0 3px rgb(99, 98, 98);
+}
+#checkbox-page1:checked ~ .book #page1 {
+  transform: rotateY(-180deg);
+  z-index: 2;
+}
+#checkbox-page2:checked ~ .book #page2 {
+  transform: rotateY(-180deg);
+  z-index: 3;
+}
+
+/* ////////
+Book 3d
+*/
+.book-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.book-3d .book {
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+.book-3d .book:before {
+  transform-origin: left;
+  background: url('/images/mark_rammers/1.jpg');
+  background-position: center;
+  transform: rotateY(90deg);
+}
+.book-3d .book:after {
+  transform-origin: center;
+  background: url('/images/landon_speers/1.jpg');
+  background-position: center;
+  transform: rotateY(180deg) translateZ(60px);
+}
+.book-3d .book:hover {
+  transform: rotateY(35deg);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+.book-3d .book:active {
+  transform: rotateY(180deg);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
 }
