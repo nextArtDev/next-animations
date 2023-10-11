@@ -11,7 +11,6 @@ type PageProps = {
   className: string
 }
 
-// eslint-disable-next-line react/display-name
 const SinglePage = forwardRef<HTMLDivElement, PageProps>((props, ref) => {
   return (
     <div className={`${props.className}`} ref={ref}>
@@ -21,6 +20,7 @@ const SinglePage = forwardRef<HTMLDivElement, PageProps>((props, ref) => {
     </div>
   )
 })
+SinglePage.displayName = 'SinglePage'
 
 interface ReactPageFlipProps {}
 
