@@ -4,11 +4,11 @@ import { useState } from 'react'
 
 type Props = {}
 
-export default function MainPage(props: Props) {
+export default function ScrollNavbar(props: Props) {
   return (
     <section className="relative w-full bg-neutral-900">
       <Navigation />
-      <Content />
+      {/* <Content /> */}
     </section>
   )
 }
