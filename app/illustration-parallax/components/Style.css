@@ -1,0 +1,33 @@
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+img {
+  display: block;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
+}
+:root {
+  --color-black: #303030;
+  --color-white: #fdfaf7;
+  --font-size-h1: 0.98rem;
+  --font-size-desc-1: 0.18rem;
+  --font-size-header-text: 0.24rem;
+  --font-size-header-link: 0.22rem;
+  --font-size-btn-1: 0.22rem;
+  --font-size-btn-2: 0.22rem;
+  --font-size-footer-link: 0.22rem;
+  --line-height-h1: 1.17rem;
+  --line-height-desc-1: 0.28rem;
+  --line-height-header-text: 0.24rem;
+  --line-height-header-link: 0.22rem;
+  --line-height-btn-1: 0.14rem;
+  --line-height-btn-2: 0.22rem;
+  --line-height-footer-link: 0.12rem;
+}

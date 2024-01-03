@@ -9,6 +9,7 @@ import Earth from '../public/projects/3d-earth.png'
 import FlipCard from '../public/projects/flipCard.png'
 import Pixalate from '../public/projects/pixalate.png'
 import Login from '../public/projects/login-form.png'
+import Landing from '../public/projects/landing.png'
 import Link from 'next/link'
 
 const projects = [
@@ -56,6 +57,12 @@ const projects = [
     name: 'Login Form',
     image: Login,
     url: '/login-form',
+  },
+  {
+    id: 10,
+    name: 'Landing',
+    image: Landing,
+    url: '/landing',
   },
 ]
 export default function Home() {
