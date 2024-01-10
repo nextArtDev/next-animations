@@ -10,6 +10,7 @@ import FlipCard from '../public/projects/flipCard.png'
 import Pixalate from '../public/projects/pixalate.png'
 import Login from '../public/projects/login-form.png'
 import Landing from '../public/projects/landing.png'
+import TwoParallax from '../public/projects/two-parallax-scroll.png'
 import Link from 'next/link'
 
 const projects = [
@@ -63,6 +64,12 @@ const projects = [
     name: 'Landing',
     image: Landing,
     url: '/landing',
+  },
+  {
+    id: 11,
+    name: 'Two Parallax Scroll',
+    image: TwoParallax,
+    url: '/prallax-scroll-two-ways',
   },
 ]
 export default function Home() {
