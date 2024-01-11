@@ -6,6 +6,7 @@ import Picture2 from '../../../public/parallax-images/5.jpg'
 import Picture3 from '../../../public//parallax-images/6.jpg'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { MotionDiv, MotionH1, MotionSpan } from './motion-card'
 
 const word = 'with framer-motion'
 
@@ -37,7 +38,7 @@ export default function FramerMotion() {
   return (
     <div ref={container} className={styles.container}>
       <div className={styles.body}>
-        <motion.h1 style={{ y: sm }}>Parallax</motion.h1>
+        <MotionH1 style={{ y: sm }}>Parallax</MotionH1>
         <h1>Scroll</h1>
         <div className={styles.word}>
           <p>
@@ -48,9 +49,9 @@ export default function FramerMotion() {
                 [0, Math.floor(Math.random() * -75) - 25]
               )
               return (
-                <motion.span style={{ top: y }} key={`l_${i}`}>
+                <MotionSpan style={{ top: y }} key={`l_${i}`}>
                   {letter}
-                </motion.span>
+                </MotionSpan>
               )
             })}
           </p>
@@ -59,13 +60,13 @@ export default function FramerMotion() {
       <div className={styles.images}>
         {images.map(({ src, y }, i) => {
           return (
-            <motion.div
+            <MotionDiv
               style={{ y }}
               key={`i_${i}`}
               className={styles.imageContainer}
             >
               <Image src={src} placeholder="blur" alt="image" fill />
-            </motion.div>
+            </MotionDiv>
           )
         })}
       </div>

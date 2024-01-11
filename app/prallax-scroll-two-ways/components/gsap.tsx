@@ -14,8 +14,8 @@ const word = 'with gsap'
 export default function GSAP() {
   const container = useRef(null)
   const images = [Picture1, Picture2, Picture3]
-  const lettersRef = useRef([])
-  const imagesRef = useRef([])
+  const lettersRef = useRef<(HTMLSpanElement | null)[]>([])
+  const imagesRef = useRef<(HTMLDivElement | null)[]>([])
   const title1 = useRef(null)
   useLayoutEffect(() => {
     const context = gsap.context(() => {
@@ -29,12 +29,14 @@ export default function GSAP() {
           },
         })
         .to(title1.current, { y: -50 }, 0)
-        .to(imagesRef.current[1], { y: -150 }, 0)
-        .to(imagesRef.current[2], { y: -255 }, 0)
+        .to(imagesRef.current[1], { y: 150, x: '-200%' }, 0)
+        .to(imagesRef.current[2], { y: 255, x: '300%' }, 0)
+        .to(imagesRef.current[0], { zoom: 1.5 }, 0)
       lettersRef.current.forEach((letter, i) => {
         tl.to(
           letter,
           {
+            // because its span, y value doesn't effect on that; we use top
             top: Math.floor(Math.random() * 50) - 50,
             // top: Math.floor(Math.random() * -75) - 25,
           },
@@ -46,13 +48,13 @@ export default function GSAP() {
   }, [])
 
   return (
-    <div ref={container} className={styles.container}>
+    <div ref={container} className={` ${styles.container}`}>
       <div className={styles.body}>
         <h1 ref={title1}>Parallax</h1>
         <h1>Scroll</h1>
         <div className={styles.word}>
           <p>
-            {word.split('').map((letter, i) => {
+            {word.split(' ').map((letter, i) => {
               return (
                 <span key={`l_${i}`} ref={(el) => (lettersRef.current[i] = el)}>
                   {letter}

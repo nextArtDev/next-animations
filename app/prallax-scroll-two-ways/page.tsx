@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const lenis = new Lenis()
 
-    function raf(time) {
+    function raf(time: any) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
@@ -19,6 +19,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <div className="min-h-screen" />
       <GSAP />
       <FramerMotion />
     </main>
