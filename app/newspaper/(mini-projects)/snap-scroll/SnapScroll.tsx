@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import texture from '../../../public/newspaper/texture/texture.jpg'
+import texture from '../../../../public/newspaper/texture/texture.jpg'
 interface SnapScrollProps {}
 
 const SnapScroll: FC<SnapScrollProps> = ({}) => {

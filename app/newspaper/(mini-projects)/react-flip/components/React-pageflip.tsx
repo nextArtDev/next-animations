@@ -4,7 +4,8 @@
 
 import { FC, ReactNode, forwardRef } from 'react'
 import HTMLFlipBook from 'react-pageflip'
-import textureBg from '../../../../public/newspaper/texture/texture.jpg'
+import textureBg from '../../../../../public/newspaper/texture/texture.jpg'
+// import textureBg from '../../../../public/newspaper/texture/texture.jpg'
 type PageProps = {
   number: string
   children: ReactNode

@@ -7,7 +7,7 @@ import gsap from 'gsap'
 interface RetroWebsiteProps {}
 
 const RetroWebsite: FC<RetroWebsiteProps> = ({}) => {
-  const section1Ref = useRef(null)
+  const section1Ref = useRef<HTMLElement | null>(null)
   useEffect(() => {
     // gsap.from('h1 b', {
     //   y: 100,
@@ -36,7 +36,7 @@ const RetroWebsite: FC<RetroWebsiteProps> = ({}) => {
     //   duration: 1,
     // })
 
-    section1Ref.current.addEventListener(
+    section1Ref.current?.addEventListener(
       'mousemove',
       (e: { clientX: any; clientY: any }) => {
         gsap.to('.box', {
@@ -48,7 +48,7 @@ const RetroWebsite: FC<RetroWebsiteProps> = ({}) => {
         })
       }
     )
-    section1Ref.current.addEventListener(
+    section1Ref.current?.addEventListener(
       'mouseout',
       (e: { clientX: any; clientY: any }) => {
         gsap.to('.box', {
