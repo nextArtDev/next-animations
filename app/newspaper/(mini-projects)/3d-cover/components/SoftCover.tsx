@@ -4,7 +4,7 @@ type Props = {}
 
 function SoftCover({}: Props) {
   return (
-    <section className="body">
+    <section className="body1">
       <div className="main">
         <h1>
           <span className="book" style={{ transform: 'rotate(180deg)' }}>

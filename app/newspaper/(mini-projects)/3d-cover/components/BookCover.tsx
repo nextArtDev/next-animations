@@ -4,7 +4,7 @@ type Props = {}
 
 function BookCover({}: Props) {
   return (
-    <article>
+    <article className="article">
       <div className="cover-back"></div>
       <div className="pages">
         <span></span>
