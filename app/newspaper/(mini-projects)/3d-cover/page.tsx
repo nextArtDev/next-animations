@@ -5,6 +5,7 @@ import SoftCover from './components/SoftCover'
 import PaperCover from './components/PaperCover'
 import LeatherCover from './components/LeatherCover'
 import BookEffect from './components/BookEffect'
+import SakhtCover from './components/SakhtCover'
 
 type Props = {}
 
@@ -12,6 +13,7 @@ function page({}: Props) {
   return (
     <div className="flex flex-col  min-h-screen">
       <BookEffect />
+      <SakhtCover />
       {/* <div className="h-screen">
         <BookCover />
         </div>
