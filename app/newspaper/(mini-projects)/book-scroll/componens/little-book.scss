@@ -112,6 +112,7 @@ body {
 
     &__page {
         position: absolute;
+            background-color: white;
         left: 2%;
         top: 50%;
         border-radius: 0 5% 5% 0;
@@ -168,7 +169,7 @@ body {
 
 .code {
     line-height: 1.2;
-    background-color: white;
+
     font-family: monospace;
     white-space: pre-line;
     max-width: 100%;
