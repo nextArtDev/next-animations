@@ -1,6 +1,7 @@
 'use client'
 import { motion, useTransform, useScroll } from 'framer-motion'
 import { useRef } from 'react'
+import { GoogleGeminiEffect } from './Gemini'
 
 interface ExampleProps {
   rtl?: boolean
@@ -30,6 +31,18 @@ const HorizontalScrollCarousel = ({ rtl }: { rtl?: boolean }) => {
   })
   const xTransform: string = rtl ? '75%' : '-75%'
   const x = useTransform(scrollYProgress, [0, 1], ['1%', xTransform])
+
+  //   const geminiTransform: number[] = rtl ? [1.2,0.2] : [0.2, 1.2]
+  //   const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2])
+  //   const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2])
+  //   const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2])
+  //   const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2])
+  //   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2])
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2])
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2])
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2])
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2])
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2])
   //   for rtl
   //   const x = useTransform(scrollYProgress, [0, 1], ['1%', '75%'])
 
@@ -41,7 +54,16 @@ const HorizontalScrollCarousel = ({ rtl }: { rtl?: boolean }) => {
       ref={targetRef}
       className="relative h-[300vh] bg-neutral-900"
     >
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden  ">
+        <GoogleGeminiEffect
+          pathLengths={[
+            pathLengthFirst,
+            pathLengthSecond,
+            pathLengthThird,
+            pathLengthFourth,
+            pathLengthFifth,
+          ]}
+        />
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />
@@ -56,7 +78,7 @@ const Card = ({ card }: { card: CardType }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[250px] md:w-[450px] overflow-hidden bg-neutral-200"
+      className="bg-transparent group relative h-[450px] w-[250px] md:w-[450px] overflow-hidden bg-neutral-200 "
     >
       <div
         style={{
@@ -67,7 +89,7 @@ const Card = ({ card }: { card: CardType }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+        <p className="bg-gradient-to-br from-white/5 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-sm">
           {card.title}
         </p>
       </div>
