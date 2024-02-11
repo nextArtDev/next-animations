@@ -40,6 +40,8 @@ const Card = ({
     <div ref={container} className={styles.cardContainer}>
       <motion.div
         style={{
+          // backgroundImage: `url(/parallax-images/${src})`,
+          // backgroundBlendMode: 'exclusion',
           backgroundColor: color,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
