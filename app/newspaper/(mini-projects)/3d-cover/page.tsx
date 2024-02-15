@@ -14,12 +14,12 @@ function page({}: Props) {
     <div className="flex flex-col  min-h-screen">
       <BookEffect />
       <SakhtCover />
-      {/* <div className="h-screen">
+      <div className="h-screen">
         <BookCover />
-        </div>
-        <div className="h-screen">
+      </div>
+      <div className="h-screen">
         <PaperCover />
-        </div>
+      </div>
       <div className="h-screen">
         <SoftCover />
       </div>
@@ -28,7 +28,7 @@ function page({}: Props) {
       </div>
       <div className="h-screen">
         <LeatherCover />
-      </div> */}
+      </div>
     </div>
   )
 }
