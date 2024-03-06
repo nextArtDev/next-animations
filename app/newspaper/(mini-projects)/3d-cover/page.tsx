@@ -12,15 +12,15 @@ type Props = {}
 function page({}: Props) {
   return (
     <div className="flex flex-col  min-h-screen">
-      <BookEffect />
+      {/* <BookEffect />
       <SakhtCover />
       <div className="h-screen">
         <BookCover />
-      </div>
+      </div> */}
       <div className="h-screen">
         <PaperCover />
       </div>
-      <div className="h-screen">
+      {/* <div className="h-screen">
         <SoftCover />
       </div>
       <div className="h-screen">
@@ -28,7 +28,7 @@ function page({}: Props) {
       </div>
       <div className="h-screen">
         <LeatherCover />
-      </div>
+      </div> */}
     </div>
   )
 }

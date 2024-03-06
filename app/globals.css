@@ -405,3 +405,7 @@ Book 3d
   transform: rotateY(180deg);
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
 }
+
+.backfaceHidden {
+  backface-visibility: hidden;
+}

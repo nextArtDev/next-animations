@@ -48,15 +48,15 @@
     transparent 110px
   );
 } */
-.line {
+/* .line {
   position: absolute;
   width: 2.3px;
   height: 98%;
   background-color: #c25d6095;
   margin-left: 8%;
   z-index: 10;
-}
-.content {
+} */
+/* .content {
   font-family: 'Handlee', cursive;
   font-size: 17px;
   font-weight: 600;
@@ -64,8 +64,8 @@
   height: 100%;
   letter-spacing: 1px;
   word-spacing: 1px;
-}
-.content ol {
+} */
+/* .content ol {
   position: relative;
   top: 31px;
   margin-left: 22px;
@@ -92,8 +92,8 @@
 }
 .ol li:nth-child(5n + 5) {
   color: #a2f;
-}
-.hole {
+} */
+/* .hole {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -101,7 +101,7 @@
   position: absolute;
   top: 2%;
   left: 12px;
-  /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset; */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
   box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 .hole:nth-child(2) {
@@ -109,7 +109,7 @@
 }
 .hole:nth-child(3) {
   top: 85%;
-}
+} */
 
 .textarea {
   position: absolute;
