@@ -7,7 +7,9 @@ interface pageProps {}
 const page: FC<pageProps> = ({}) => {
   return (
     // <ReactPageFlip />
-    <AutoFlipBook />
+    <div className="bg-transparent">
+      <AutoFlipBook />
+    </div>
   )
 }
 
