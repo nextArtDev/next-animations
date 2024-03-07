@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@cdk0507/react-pageflip':
+    specifier: ^1.6.0
+    version: 1.6.0
   '@react-three/drei':
     specifier: ^9.88.7
     version: 9.88.7(@react-three/fiber@8.15.8)(@types/three@0.156.0)(react-dom@18.2.0)(react@18.2.0)(three@0.157.0)
@@ -109,6 +112,16 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
+
+  /@cdk0507/page-flip@1.6.0:
+    resolution: {integrity: sha512-f+BKwKaJk3NL3N5nVlQxhhvzYdGVFVJrSJCifIrZtm4DdAHpye3E2oLIstf5GaBFe7mSa9L0Z5zMmyKBIZRpUw==}
+    dev: false
+
+  /@cdk0507/react-pageflip@1.6.0:
+    resolution: {integrity: sha512-9c3smwf3MiRKyZWOo6uLhraq0uhdA/Uv2ISG0mcmc1+aGg5PEP9SOmUlViXIuLgprvtv+DmvJ7bN0GmLofATMA==}
+    dependencies:
+      '@cdk0507/page-flip': 1.6.0
+    dev: false
 
   /@emotion/is-prop-valid@0.8.8:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}

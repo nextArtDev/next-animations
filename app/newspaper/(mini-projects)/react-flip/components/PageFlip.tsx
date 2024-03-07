@@ -43,7 +43,7 @@ const AutoFlipBook = () => {
   }
 
   return (
-    <section className="h-[200vh]  overflow-x-hidden px-8 mx-auto w-full flex items-center justify-center">
+    <section className="h-[150vh]  overflow-x-hidden px-8 mx-auto w-full flex items-center justify-center">
       {/* @ts-ignore */}
       <HTMLFlipBook
         className="flip-book"
@@ -51,38 +51,38 @@ const AutoFlipBook = () => {
         ref={book}
         // width={300}
         // height={500}
-        width={550} // base page width
-        height={733} // base page height
+        width={350} // base page width
+        height={433} // base page height
         size={'stretch'}
         // set threshold values=
         minWidth={315}
-        maxWidth={1000}
+        // maxWidth={1000}
         minHeight={420}
-        maxHeight={1350}
-        maxShadowOpacity={0.5}
-        // showCover={true}
+        // maxHeight={1350}
+        // maxShadowOpacity={0.5}
+        showCover={true}
         mobileScrollSupport={false} // disable content scrolling on mobile devices
       >
-        {/* <div className="bg-blue-500 backdrop-blur-3xl demoPage">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-        nesciunt recusandae numquam debitis quisquam officiis temporibus
-        explicabo error, dolores non aliquid sed laborum rem culpa voluptas
-        nihil labore alias molestiae.
-      </div>
-      <div
-        style={{ backfaceVisibility: 'hidden' }}
-        className="backfaceHidden demoPage bg-red-500"
-      >
-        Page 2
-      </div>
-      <div className="demoPage bg-yellow-300">Page 3</div>
-      <div className="demoPage bg-blue-500">Page 4</div>
-      <div className="demoPage bg-indigo-300">Page 5</div>
-      <div className="demoPage bg-red-500">Page 6</div>
-      <div className="demoPage bg-blue-300">Page 7</div>
-      <div className="demoPage bg-red-500">Page 8</div> */}
+        <div className="bg-blue-500 backdrop-blur-3xl demoPage">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          nesciunt recusandae numquam debitis quisquam officiis temporibus
+          explicabo error, dolores non aliquid sed laborum rem culpa voluptas
+          nihil labore alias molestiae.
+        </div>
+        <div
+          // style={{ backfaceVisibility: 'hidden' }}
+          className="page backfaceHidden demoPage bg-red-500"
+        >
+          Page 2
+        </div>
+        <div className="page demoPage bg-yellow-300">Page 3</div>
+        <div className="page demoPage origin-left bg-blue-500">Page 4</div>
+        <div className="page demoPage origin-left bg-indigo-300">Page 5</div>
+        <div className="page demoPage origin-left bg-red-500">Page 6</div>
+        <div className="page demoPage origin-left bg-blue-300">Page 7</div>
+        <div className="page demoPage origin-left bg-red-500">Page 8</div>
 
-        <div className="page page-cover page-cover-top" data-density="hard">
+        {/* <div className="page page-cover page-cover-top" data-density="hard">
           <div className="page-content">
             <h2>BOOK TITLE</h2>
           </div>
@@ -164,7 +164,7 @@ const AutoFlipBook = () => {
           <div className="page-content">
             <h2>THE END</h2>
           </div>
-        </div>
+        </div> */}
       </HTMLFlipBook>
     </section>
   )
