@@ -6,11 +6,12 @@ import { useControls } from 'leva'
 
 export default function Model() {
   const { nodes } = useGLTF('/3d-glass/untitled.glb')
+
   const { viewport } = useThree()
   const torus = useRef(null)
 
   useFrame(() => {
-    torus.current.rotation.x += 0.02
+    torus.current.rotation.y += 0.02
   })
 
   const materialProps = useControls({
@@ -23,7 +24,8 @@ export default function Model() {
   })
 
   return (
-    <group scale={viewport.width / 3.75}>
+    // <group scale={viewport.width / 3.75}>
+    <group scale={viewport.width * 1.75}>
       <Text
         // font={'/fonts/PPNeueMontreal-Bold.otf'}
         position={[0, 0, -1]}
@@ -31,10 +33,12 @@ export default function Model() {
         color="white"
         anchorX="center"
         anchorY="middle"
+        scale={0.7}
       >
-        hello world!
+        Coffee Shop
       </Text>
-      <mesh ref={torus} {...nodes.Torus002}>
+
+      <mesh ref={torus} {...nodes.Cylinder001}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>
