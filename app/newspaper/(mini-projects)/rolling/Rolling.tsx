@@ -8,10 +8,18 @@ interface RollingProps {}
 const Rolling: FC<RollingProps> = ({}) => {
   const ref = useRef(null)
   const isInView = useInView(ref)
-
+  const imageUrls = [
+    'https://assets.codepen.io/652/kabo-NjWZ07sPEJE-unsplash.jpg',
+  ]
   return (
-    <div className="gallery">
-      <motion.figure className="imageRoll" ref={ref}>
+    <div className="flex w-full h-full items-center justify-center">
+      <motion.figure
+        className="imageRoll"
+        ref={ref}
+        style={{
+          '--imageUrl': `url(${imageUrls[0] || ''})`,
+        }}
+      >
         <motion.i className={` ${isInView ? 'in-view' : ''}`}>
           <i>
             <i>
@@ -131,8 +139,9 @@ const Rolling: FC<RollingProps> = ({}) => {
             </i>
           </i>
         </motion.i>
+
         <figcaption>
-          Kitten: <strong>Ollie</strong> (12 Weeks)
+          {/* Kitten: <strong>Ollie</strong> (12 Weeks) */}
         </figcaption>
       </motion.figure>
     </div>

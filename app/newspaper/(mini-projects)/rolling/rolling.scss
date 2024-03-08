@@ -58,7 +58,7 @@ figure {
         height: 100%;
         transform-style: preserve-3d;
         transform-origin: left;
-        transition: transform 2.6s var(--delay, 2s) ease-in-out;
+        transition: transform .6s var(--delay, 2s) ease-in-out;
         background-image:
             linear-gradient(#0003, #0000 5% 95%, #0003),
             var(--imageUrl, '');

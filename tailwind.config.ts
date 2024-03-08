@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const maxImages = 60
 
 const config: Config = {
   content: [
@@ -12,6 +13,12 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        ...Object.fromEntries(
+          [...Array(maxImages)].map((_, index) => [
+            `image-${index + 1}`,
+            `var(--imageUrl-${index + 1})`,
+          ])
+        ),
       },
     },
   },
