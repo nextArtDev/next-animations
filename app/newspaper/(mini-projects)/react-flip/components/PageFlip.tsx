@@ -43,10 +43,15 @@ const AutoFlipBook = () => {
   }
 
   return (
-    <section className="h-[150vh]  overflow-x-hidden px-8 mx-auto w-full flex items-center justify-center">
+    <section
+      dir="rtl"
+      className="h-[150vh]  overflow-hidden px-8 mx-auto w-full flex items-center justify-center"
+    >
       {/* @ts-ignore */}
       <HTMLFlipBook
-        className="flip-book"
+        // className="flip-book"
+
+        style={{ boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.5)' }}
         onFlip={handlePageTurn}
         ref={book}
         // width={300}
@@ -63,24 +68,100 @@ const AutoFlipBook = () => {
         showCover={true}
         mobileScrollSupport={false} // disable content scrolling on mobile devices
       >
-        <div className="bg-blue-500 backdrop-blur-3xl demoPage">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          nesciunt recusandae numquam debitis quisquam officiis temporibus
-          explicabo error, dolores non aliquid sed laborum rem culpa voluptas
-          nihil labore alias molestiae.
+        <div
+          style={{
+            backgroundColor: 'hsl(35, 55, 98)',
+            color: 'hsl(35, 35, 35)',
+            border: 'solid 1px hsl(35, 20, 70)',
+            boxShadow: 'inset -7px 0 30px -7px rgba(0, 0, 0, 0.4)',
+          }}
+          className=" bg-[hsl(35, 55, 98)]   "
+        >
+          page1
         </div>
         <div
           // style={{ backfaceVisibility: 'hidden' }}
-          className="page backfaceHidden demoPage bg-red-500"
+          className=" bg-[hsl(35, 55, 98)]"
+          style={{
+            backgroundColor: 'hsl(35, 55, 98)',
+            color: 'hsl(35, 35, 35)',
+            border: 'solid 1px hsl(35, 20, 70)',
+            boxShadow: 'inset -7px 0 30px -7px rgba(0, 0, 0, 0.4)',
+          }}
         >
           Page 2
         </div>
-        <div className="page demoPage bg-yellow-300">Page 3</div>
-        <div className="page demoPage origin-left bg-blue-500">Page 4</div>
-        <div className="page demoPage origin-left bg-indigo-300">Page 5</div>
-        <div className="page demoPage origin-left bg-red-500">Page 6</div>
-        <div className="page demoPage origin-left bg-blue-300">Page 7</div>
-        <div className="page demoPage origin-left bg-red-500">Page 8</div>
+        <div
+          style={{
+            backgroundColor: 'hsl(35, 55, 98)',
+            color: 'hsl(35, 35, 35)',
+            border: 'solid 1px hsl(35, 20, 70)',
+            boxShadow: 'inset 7px 0 30px -7px rgba(0, 0, 0, 0.4)',
+          }}
+          className="bg-[hsl(35, 55, 98)]"
+        >
+          Page 3
+        </div>
+
+        <div
+          style={{
+            backgroundColor: 'hsl(35, 55, 98)',
+            color: 'hsl(35, 35, 35)',
+            border: 'solid 1px hsl(35, 20, 70)',
+            boxShadow: 'inset -7px 0 30px -7px rgba(0, 0, 0, 0.4)',
+          }}
+          className="origin-left bg-[hsl(35, 55, 98)]"
+        >
+          Page 4
+        </div>
+
+        <div
+          style={{
+            backgroundColor: 'hsl(35, 55, 98)',
+            color: 'hsl(35, 35, 35)',
+            border: 'solid 1px hsl(35, 20, 70)',
+            boxShadow: 'inset 7px 0 30px -7px rgba(0, 0, 0, 0.4)',
+          }}
+          className=" origin-left bg-[hsl(35, 55, 98)]"
+        >
+          Page 5
+        </div>
+
+        <div
+          style={{
+            backgroundColor: 'hsl(35, 55, 98)',
+            color: 'hsl(35, 35, 35)',
+            border: 'solid 1px hsl(35, 20, 70)',
+            boxShadow: 'inset -7px 0 30px -7px rgba(0, 0, 0, 0.4)',
+          }}
+          className="origin-left bg-[hsl(35, 55, 98)]"
+        >
+          Page 6
+        </div>
+
+        <div
+          style={{
+            backgroundColor: 'hsl(35, 55, 98)',
+            color: 'hsl(35, 35, 35)',
+            border: 'solid 1px hsl(35, 20, 70)',
+            boxShadow: 'inset 7px 0 30px -7px rgba(0, 0, 0, 0.4)',
+          }}
+          className=" origin-left bg-[hsl(35, 55, 98)]"
+        >
+          Page 7
+        </div>
+
+        <div
+          style={{
+            backgroundColor: 'hsl(35, 55, 98)',
+            color: 'hsl(35, 35, 35)',
+            border: 'solid 1px hsl(35, 20, 70)',
+            boxShadow: 'inset -7px 0 30px -7px rgba(0, 0, 0, 0.4)',
+          }}
+          className="origin-left bg-[hsl(35, 55, 98)]"
+        >
+          Page 8
+        </div>
 
         {/* <div className="page page-cover page-cover-top" data-density="hard">
           <div className="page-content">
