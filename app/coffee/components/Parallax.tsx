@@ -49,8 +49,8 @@ const Parallax = ({ type }: { type: string }) => {
     offset: ['start end', 'end start'],
   })
 
-  const Y5 = useTransform(scrollYProgress, [0, 1], ['-150vh', '140vh'])
-  const X5 = useTransform(scrollYProgress, [0, 1], ['-80vw', '90vw'])
+  const Y5 = useTransform(scrollYProgress, [0, 1], ['-110vh', '130vh'])
+  const X5 = useTransform(scrollYProgress, [0, 1], ['-70vw', '110vw'])
   const R5 = useTransform(scrollYProgress, [0, 1], [0, 5600])
 
   const Y7 = useTransform(scrollYProgress, [0, 1], ['-100vh', '80vh'])
@@ -67,18 +67,18 @@ const Parallax = ({ type }: { type: string }) => {
 
   const Y13 = useTransform(scrollYProgress, [0, 1], ['-150vh', '100vh'])
   const X13 = useTransform(scrollYProgress, [0, 1], ['-50vw', '100vw'])
-  const R13 = useTransform(scrollYProgress, [0, 1], [0, 5600])
+  const S13 = useTransform(scrollYProgress, [0, 1], [0.5, 0.8])
 
   //Ghand
-  const Y9 = useTransform(scrollYProgress, [0, 1], ['-30vh', '100vh'])
+  const Y9 = useTransform(scrollYProgress, [0, 1], ['-30vh', '130vh'])
   const X9 = useTransform(scrollYProgress, [0, 1], ['100vw', '20vw'])
   const R9 = useTransform(scrollYProgress, [0, 1], [0, 5600])
 
-  const Y10 = useTransform(scrollYProgress, [0, 1], ['50vh', '50vh'])
+  const Y10 = useTransform(scrollYProgress, [0, 1], ['50vh', '60vh'])
   const X10 = useTransform(scrollYProgress, [0, 1], ['100vw', '20vw'])
   const R10 = useTransform(scrollYProgress, [0, 1], [0, 5600])
 
-  const Y11 = useTransform(scrollYProgress, [0, 1], ['0vh', '80vh'])
+  const Y11 = useTransform(scrollYProgress, [0, 1], ['0vh', '100vh'])
   const X11 = useTransform(scrollYProgress, [0, 1], ['80vw', '-30vw'])
   const R11 = useTransform(scrollYProgress, [0, 1], [0, 5600])
 
@@ -157,13 +157,13 @@ const Parallax = ({ type }: { type: string }) => {
       src: Picture12,
       y: Y12,
       x: X12,
-      rotation: R12,
+      scale: S13,
     },
     {
       src: Picture13,
       y: Y13,
       x: X13,
-      rotation: R13,
+      scale: S13,
     },
     //
     // {
@@ -203,11 +203,16 @@ const Parallax = ({ type }: { type: string }) => {
         </div>
       </div> */}
       <div className={styles.images}>
-        {images.map(({ src, y, x, rotation }, i) => {
-          console.log(i, src.width, src.width, rotation)
+        {images.map(({ src, y, x, rotation, scale }, i) => {
+          // console.log(i, src.width, src.width, scale)
           return (
             <MotionDiv
-              style={{ x, y, transform: `rotate(${rotation}deg)` }}
+              style={{
+                x,
+                y,
+                transform: `rotate(${rotation}deg) scale(${scale})`,
+                scale: '0.7',
+              }}
               key={`i_${i}`}
               className={styles.imageContainer}
             >
