@@ -20,6 +20,16 @@ const config: Config = {
           ])
         ),
       },
+      keyframes: {
+        'spin-reverse': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        },
+      },
+      animation: {
+        'spin-slow': 'spin 40s linear infinite',
+        'spin-slow-reverse': 'spin-reverse 40s linear infinite',
+      },
     },
   },
   plugins: [],

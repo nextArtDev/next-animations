@@ -1,9 +1,11 @@
 .container{
-    margin-top: 10vh;
+    // margin-top: 10vh;
     height: 100vh;
 overflow: hidden;
     background-position: bottom;
     object-fit: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
     
     background-image: url('/coffee/bg-removed/bg.png');
     .body{
@@ -113,6 +115,13 @@ overflow: hidden;
                 z-index: 3;
             }
             &:nth-of-type(12){
+            left: 50%;
+                top: 0;;
+    height: 294px;
+        width: 285px;
+                z-index: 3;
+            }
+            &:nth-of-type(13){
             left: 50%;
                 top: 0;;
      
