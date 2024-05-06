@@ -1,4 +1,5 @@
 import Navigation from './components/Menu/Navigation'
+import MenuTabs from './components/Menu/tabs/MenuTabs'
 import TabContents from './components/Menu/tabs/TabContents'
 
 import Parallax from './components/Parallax'
@@ -7,9 +8,10 @@ import ParallaxGsap from './components/ParallaxGsap'
 function page() {
   return (
     <>
-      <div className="h-screen bg-black w-full">
+      <div className="h-screen bg-orange-400 w-full">
         {/* <ParallaxGsap /> */}
-        <Navigation />
+        {/* <Navigation /> */}
+        <MenuTabs />
         {/* <TabContents /> */}
       </div>
       <div className="h-[100vh] w-full">
