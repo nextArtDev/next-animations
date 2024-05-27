@@ -4,7 +4,12 @@ import { FC } from 'react'
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
-  return <MainPage />
+  return (
+    <div>
+      <MainPage />
+      <div className="h-[200vh]"></div>
+    </div>
+  )
 }
 
 export default page

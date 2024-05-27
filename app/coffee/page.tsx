@@ -8,7 +8,7 @@ import ParallaxGsap from './components/ParallaxGsap'
 function page() {
   return (
     <>
-      <div className="h-screen bg-orange-400 w-full">
+      <div className="h-screen bg-orange-900 w-full">
         {/* <ParallaxGsap /> */}
         {/* <Navigation /> */}
         <MenuTabs />

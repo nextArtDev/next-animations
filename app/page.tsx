@@ -12,6 +12,7 @@ import Login from '../public/projects/login-form.png'
 import Landing from '../public/projects/landing.png'
 import TwoParallax from '../public/projects/two-parallax-scroll.png'
 import CardParallax from '../public/projects/card-parallax.png'
+import MagnetEffect from '../public/projects/magnet.png'
 import Link from 'next/link'
 
 const projects = [
@@ -77,6 +78,12 @@ const projects = [
     name: 'CardParallax',
     image: CardParallax,
     url: '/card-parallax',
+  },
+  {
+    id: 13,
+    name: 'Magnet Button ',
+    image: MagnetEffect,
+    url: '/magnetic-button',
   },
 ]
 export default function Home() {

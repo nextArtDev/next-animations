@@ -29,7 +29,7 @@ export default function FramerMagnetic({ children }: { children: ReactNode }) {
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x, y }}
-      transition={{ type: 'spring', stiffness: 150, damping: 15, mass: 0.1 }}
+      transition={{ type: 'spring', stiffness: 100, damping: 35, mass: 0.8 }}
     >
       {children}
     </motion.div>

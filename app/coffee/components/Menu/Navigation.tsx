@@ -60,10 +60,10 @@ const Navigation = ({ singleType }: { singleType: SingleTypes }) => {
                     // variants={item}
                     // href={'#'}
                     // target={newTab ? '_blank' : '_self'}
-                    className="text-foreground  rounded-full flex items-center justify-center custom-bg"
+                    className="text-foreground  rounded-full flex items-center justify-center custom-bg !data-[state=active]:border !data-[state=active]:border-red-800 "
                     value={btn.label}
-                    // aria-label={btn.label}
-                    // id={btn.label}
+                    aria-label={btn.label}
+                    id={btn.label}
                     // asChild
                     // prefetch={false}
                     // scroll={false}
@@ -93,7 +93,7 @@ const Navigation = ({ singleType }: { singleType: SingleTypes }) => {
           return (
             <TabsContent
               value={btn.label}
-              className="absolute flex justify-center items-center w-44 h-44 top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 "
+              className="absolute flex justify-center items-center w-44 h-44 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
             >
               <Image
                 alt=""
