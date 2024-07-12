@@ -24,7 +24,7 @@ const container = {
 }
 
 const Navigation = ({ singleType }: { singleType: SingleTypes }) => {
-  const angleIncrement = 360 / singleType.length
+  const angleIncrement = 360 / singleType?.length
   const [width, height] = useWindowSize()
   const size: number | undefined = width
 
@@ -36,7 +36,7 @@ const Navigation = ({ singleType }: { singleType: SingleTypes }) => {
       <Tabs className="relative" defaultValue={'latte'}>
         {/* <NavButton key={btn.label} x={x} y={y} {...btn} /> */}
         <TabsList>
-          {singleType.map((btn, index) => {
+          {singleType?.map((btn, index) => {
             const angleRad = (index * angleIncrement * Math.PI) / 180
             const radius = isLarge
               ? 'calc(20vw - 1rem)'

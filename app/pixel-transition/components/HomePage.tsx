@@ -16,8 +16,8 @@ export default function HomePage() {
       />
       <SampleMenu menuIsActive={menuIsActive} />
       {/* <CenteredPixelTransition menuIsActive={menuIsActive} /> */}
-      <HorizontalPixelTransition menuIsActive={menuIsActive} />
-      {/* <VerticalPixelTransition menuIsActive={menuIsActive} /> */}
+      {/* <HorizontalPixelTransition menuIsActive={menuIsActive} /> */}
+      <VerticalPixelTransition menuIsActive={menuIsActive} />
     </main>
   )
 }

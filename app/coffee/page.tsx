@@ -11,8 +11,8 @@ function page() {
       <div className="h-screen bg-orange-900 w-full">
         {/* <ParallaxGsap /> */}
         {/* <Navigation /> */}
-        <MenuTabs />
-        {/* <TabContents /> */}
+        {/* <MenuTabs /> */}
+        <TabContents />
       </div>
       <div className="h-[100vh] w-full">
         <Parallax type="services" />
