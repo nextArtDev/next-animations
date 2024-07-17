@@ -22,8 +22,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="relative embla__viewport" ref={emblaRef}>
         <div className=" embla__container  ">
           {slides.map((index) => (
-            <div className="embla__slide " key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+            <div className=" embla__slide " key={index}>
+              <div className=" relative embla__slide__number">
+                {index + 1}
+                <motion.div
+                  initial={{ height: 'auto' }}
+                  whileInView={{ height: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                  className="absolute inset-0 bg-blue-300/10 backdrop-blur-lg "
+                ></motion.div>
+              </div>
             </div>
           ))}
         </div>

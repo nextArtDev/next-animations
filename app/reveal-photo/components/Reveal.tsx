@@ -16,7 +16,7 @@ function Reveal({}: Props) {
           initial={{ height: 'auto' }}
           whileInView={{ height: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="absolute inset-0 bg-blue-600 "
+          className="absolute inset-0 bg-gray-600 "
         ></motion.div>
       </motion.div>
     </div>
