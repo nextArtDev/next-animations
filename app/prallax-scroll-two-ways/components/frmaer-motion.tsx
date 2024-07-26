@@ -18,25 +18,30 @@ export default function FramerMotion() {
   })
   const sm = useTransform(scrollYProgress, [0, 1], [0, -50])
   const md = useTransform(scrollYProgress, [0, 1], [0, -150])
-  const lg = useTransform(scrollYProgress, [0, 1], [0, -250])
+  const lg = useTransform(scrollYProgress, [0, 1], [0, 30])
+  const lgScale = useTransform(scrollYProgress, [0, 1], [1, 0])
+  const smScale = useTransform(scrollYProgress, [0, 1], [0, 1])
 
   const images = [
     {
       src: Picture1,
-      y: 0,
+      y: sm,
+      scale: smScale,
     },
     {
       src: Picture2,
       y: lg,
+      scale: lgScale,
     },
     {
       src: Picture3,
       y: md,
+      scale: smScale,
     },
   ]
 
   return (
-    <div ref={container} className={styles.container}>
+    <div ref={container} className={`${styles.container} overflow-x-hidden`}>
       <div className={styles.body}>
         <MotionH1 style={{ y: sm }}>Parallax</MotionH1>
         <h1>Scroll</h1>
@@ -58,10 +63,10 @@ export default function FramerMotion() {
         </div>
       </div>
       <div className={styles.images}>
-        {images.map(({ src, y }, i) => {
+        {images.map(({ src, y, scale }, i) => {
           return (
             <MotionDiv
-              style={{ y }}
+              style={{ x: y, scale, zoom: scale }}
               key={`i_${i}`}
               className={styles.imageContainer}
             >

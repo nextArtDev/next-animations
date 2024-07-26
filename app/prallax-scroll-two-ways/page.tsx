@@ -19,9 +19,10 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div className="min-h-screen" />
-      <GSAP />
+      <div className="min-h-screen max-w-full overflow-x-hidden" />
+      {/* <GSAP /> */}
       <FramerMotion />
+      <div className="h-screen"></div>
     </main>
   )
 }
